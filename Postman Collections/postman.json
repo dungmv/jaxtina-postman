@@ -6,72 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "user",
-			"item": [
-				{
-					"name": "check",
-					"id": "52160114-df70-4096-8ca4-0712536b1049",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"phone_number\": \"0336137313\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{account_url}}/users/check"
-					},
-					"response": []
-				},
-				{
-					"name": "list",
-					"id": "05b28b12-30b7-4b2c-8881-14226032bdef",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzE3NzUxNzQzLCJleHAiOjE3MTc4MzgxNDN9.mWQepF1xuY_pnNPkVkoBTrcygs2Jh0Qd8rGa8hKphCA"
-							}
-						],
-						"url": {
-							"raw": "{{account_url}}/users/?page=1",
-							"host": [
-								"{{account_url}}"
-							],
-							"path": [
-								"users",
-								""
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "9c02f11b-c189-4972-9676-7015c8accdc9"
-		},
-		{
 			"name": "auth",
 			"item": [
 				{
@@ -256,6 +190,134 @@
 			"id": "3785031a-fc86-480c-8af1-b048f230cb08"
 		},
 		{
+			"name": "user",
+			"item": [
+				{
+					"name": "check",
+					"id": "52160114-df70-4096-8ca4-0712536b1049",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone_number\": \"0336137313\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/users/check"
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"id": "05b28b12-30b7-4b2c-8881-14226032bdef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzE3NzUxNzQzLCJleHAiOjE3MTc4MzgxNDN9.mWQepF1xuY_pnNPkVkoBTrcygs2Jh0Qd8rGa8hKphCA"
+							}
+						],
+						"url": {
+							"raw": "{{account_url}}/users/?page=1",
+							"host": [
+								"{{account_url}}"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"id": "4fe88d4b-85f9-4c1e-bebe-7eb110ba77af",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlhMzE5MmM4LTA3YWMtNGE2YS1iZjUxLTk0MDUyMjVhOGI4OCIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJ1bnZlcmlmaWVkIl0sImlhdCI6MTcxODc5NDczNywiZXhwIjoxNzE4ODgxMTM3fQ.tLAN3BcFLeC4l0bsjYZhR_hWNEtlYBgK1S0sazcwvW4"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"123456111\",\n\t\"password_new\": \"123456A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/users/change-password"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"id": "fe39b931-6bb2-4be0-a83b-a3913b0da1f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiNzVlYWEyLTFmMzQtNDk1Ni1iZGM5LTE1NDYyOWEwMWQ5MSIsIm5hbWUiOiJNYWkgVmFuIER1bmciLCJlbWFpbCI6Im1haXZhbmR1bmc5MUBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1bnZlcmlmaWVkIl0sImlhdCI6MTcxODg1NTIwOSwiZXhwIjoxNzE4OTQxNjA5fQ.xBs-43PkcNXZlm9JhfktY0JODvkNN368nFkETPZHLMI"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"maivandung91@gmail.com\",\n\t\"name\": \"mai van dung\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/users/update"
+					},
+					"response": []
+				}
+			],
+			"id": "9c02f11b-c189-4972-9676-7015c8accdc9"
+		},
+		{
 			"name": "exam",
 			"item": [
 				{
@@ -296,7 +358,7 @@
 							"file": {}
 						},
 						"url": {
-							"raw": "{{exam_url}}/exam?page=1&limit=10",
+							"raw": "{{exam_url}}/exam",
 							"host": [
 								"{{exam_url}}"
 							],
@@ -316,11 +378,13 @@
 								},
 								{
 									"key": "page",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": "10"
+									"value": "10",
+									"disabled": true
 								},
 								{
 									"key": "status",
