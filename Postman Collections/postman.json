@@ -259,7 +259,7 @@
 			"name": "exam",
 			"item": [
 				{
-					"name": "create",
+					"name": "Create",
 					"id": "1d17802b-c7b2-4301-a128-50a091d89592",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
@@ -282,7 +282,7 @@
 					"response": []
 				},
 				{
-					"name": "Get list exam",
+					"name": "Get List",
 					"id": "0658cfa1-660a-43bf-a0ef-11ca3889ceae",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
@@ -296,7 +296,7 @@
 							"file": {}
 						},
 						"url": {
-							"raw": "{{exam_url}}/exam?sessionId=6633581b7337efcad46fc795&code=TEST22&typeExam=IELTS",
+							"raw": "{{exam_url}}/exam?code=TEST22&typeExam=IELTS",
 							"host": [
 								"{{exam_url}}"
 							],
@@ -304,10 +304,6 @@
 								"exam"
 							],
 							"query": [
-								{
-									"key": "sessionId",
-									"value": "6633581b7337efcad46fc795"
-								},
 								{
 									"key": "code",
 									"value": "TEST22"
@@ -343,7 +339,7 @@
 			"name": "session",
 			"item": [
 				{
-					"name": "create session",
+					"name": "Create",
 					"id": "bb1905e8-0b38-4381-a79a-c71c34ad1baa",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
@@ -354,7 +350,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"code\" : \"CODE\",\n    \"passcode\" : \"PASSCODE\",\n    \"type\" : \"IELTS\",\n    \"typeExam\" : \"TEST\",\n    \"dateStart\" : 1715349990,\n    \"dateEnd\" : 1715353590\n}",
+							"raw": "{\n    \"code\" : \"CODE\",\n    \"passcode\" : \"PASSCODE\",\n    \"type\" : \"IELTS\",\n    \"typeExam\" : \"TEST\",\n    \"exams\":[\n        {\n            \"skill\": \"reading\",\n            \"examId\": \"667b03df3f86bf1f780b9924\"\n        }\n    ],\n    \"dateStart\" : 1715349990,\n    \"dateEnd\" : 1715353590\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -366,7 +362,7 @@
 					"response": []
 				},
 				{
-					"name": "Get list session",
+					"name": "Get List",
 					"id": "e6496d58-7a8b-4e79-a67d-a49555b9933b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
@@ -423,7 +419,7 @@
 			"name": "subjection",
 			"item": [
 				{
-					"name": "Get subjection by id",
+					"name": "Get Detail",
 					"id": "f6256a51-47ee-442b-b7dd-9bbae3369622",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
@@ -441,7 +437,25 @@
 					"response": []
 				},
 				{
-					"name": "create subjection",
+					"name": "Get List",
+					"id": "fd4a4a23-1f59-44b0-a568-48c4336cc430",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": "{{exam_url}}/subjection"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
 					"id": "63200fa1-bc28-4567-8159-19d5afe8e0df",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
@@ -470,7 +484,7 @@
 			"name": "import",
 			"item": [
 				{
-					"name": "import listening",
+					"name": "Listening",
 					"id": "bf8e2ccf-6ac6-4b3a-9133-6fe1713ffcf6",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
@@ -494,31 +508,7 @@
 					"response": []
 				},
 				{
-					"name": "writing submit",
-					"id": "8338bed6-150b-4b53-8759-bc7c086f3c55",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {},
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "",
-									"type": "file",
-									"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
-								}
-							]
-						},
-						"url": "{{exam_url}}/import-listening"
-					},
-					"response": []
-				},
-				{
-					"name": "import reading",
+					"name": "Reading",
 					"id": "f61275f8-b30b-4e09-835e-bfa5e898a2ef",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
@@ -542,7 +532,7 @@
 					"response": []
 				},
 				{
-					"name": "import writing",
+					"name": "Writting",
 					"id": "a7351605-9843-4fa8-9885-3f3b32db13b1",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {},
@@ -567,6 +557,36 @@
 				}
 			],
 			"id": "77f5b283-c281-45b0-a9c8-19b40071f111"
+		},
+		{
+			"name": "Exam submit",
+			"item": [
+				{
+					"name": "Writting",
+					"id": "8338bed6-150b-4b53-8759-bc7c086f3c55",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
+								}
+							]
+						},
+						"url": "{{exam_url}}/import-listening"
+					},
+					"response": []
+				}
+			],
+			"id": "c49e9a86-234a-49b9-b2a7-0a7de2970051"
 		}
 	]
 }
