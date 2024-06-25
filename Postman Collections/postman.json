@@ -101,6 +101,37 @@
 						"url": "{{account_url}}/auth/verify"
 					},
 					"response": []
+				},
+				{
+					"name": "resend-otp",
+					"id": "7a4f1973-a916-461c-ab83-3a61580b487d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdiNTg1NmYxLWRkNDItNGY2Yi1hOTAwLWQxMzVhODY0YWY2NSIsIm5hbWUiOiJNYWkgVmFuIER1bmciLCJlbWFpbCI6Im1haXZhbmR1bmc5MUBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1bnZlcmlmaWVkIl0sImlhdCI6MTcxODczNTgzMiwiZXhwIjoxNzE4ODIyMjMyfQ.pKs1jE5TZLpO6KoKzJI00IC1ZooL8W89qE9mEQlNp-k"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"otp\": \"096698\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/auth/resend-otp"
+					},
+					"response": []
 				}
 			],
 			"id": "3785031a-fc86-480c-8af1-b048f230cb08"
