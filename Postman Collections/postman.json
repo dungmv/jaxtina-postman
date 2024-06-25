@@ -233,7 +233,7 @@
 			"response": []
 		},
 		{
-			"name": "create sessiion",
+			"name": "create session",
 			"id": "bb1905e8-0b38-4381-a79a-c71c34ad1baa",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {},
@@ -290,7 +290,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s1\",\n                        \"subjectionId\": \"667b02d6b1d2e945c7b77548\"\n                    }\n                ]\n            }\n          \n        ]\n    }\n}",
+					"raw": "{\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s1\",\n                        \"subjectionId\": \"667b03d53f86bf1f780b9922\"\n                    }\n                ]\n            }\n          \n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
