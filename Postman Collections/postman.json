@@ -257,307 +257,316 @@
 		},
 		{
 			"name": "exam",
-			"item": [],
+			"item": [
+				{
+					"name": "create",
+					"id": "1d17802b-c7b2-4301-a128-50a091d89592",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s1\",\n                        \"subjectionId\": \"667b03d53f86bf1f780b9922\"\n                    }\n                ]\n            }\n          \n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{exam_url}}/exam"
+					},
+					"response": []
+				},
+				{
+					"name": "Get list exam",
+					"id": "0658cfa1-660a-43bf-a0ef-11ca3889ceae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{exam_url}}/exam?sessionId=6633581b7337efcad46fc795&code=TEST22&typeExam=IELTS",
+							"host": [
+								"{{exam_url}}"
+							],
+							"path": [
+								"exam"
+							],
+							"query": [
+								{
+									"key": "sessionId",
+									"value": "6633581b7337efcad46fc795"
+								},
+								{
+									"key": "code",
+									"value": "TEST22"
+								},
+								{
+									"key": "typeExam",
+									"value": "IELTS"
+								},
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "b26a37bc-8595-41dc-87cb-f4a12225e6ae"
 		},
 		{
 			"name": "session",
-			"item": [],
+			"item": [
+				{
+					"name": "create session",
+					"id": "bb1905e8-0b38-4381-a79a-c71c34ad1baa",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\" : \"CODE\",\n    \"passcode\" : \"PASSCODE\",\n    \"type\" : \"IELTS\",\n    \"typeExam\" : \"TEST\",\n    \"dateStart\" : 1715349990,\n    \"dateEnd\" : 1715353590\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{exam_url}}/session"
+					},
+					"response": []
+				},
+				{
+					"name": "Get list session",
+					"id": "e6496d58-7a8b-4e79-a67d-a49555b9933b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{exam_url}}/session?dateFrom=1714640923&dateTo=1714640923",
+							"host": [
+								"{{exam_url}}"
+							],
+							"path": [
+								"session"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "1714640923"
+								},
+								{
+									"key": "dateTo",
+									"value": "1714640923"
+								},
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "706f75a5-18da-409c-afbf-2fa9a8037aca"
 		},
 		{
-			"name": "session Copy",
-			"item": [],
+			"name": "subjection",
+			"item": [
+				{
+					"name": "Get subjection by id",
+					"id": "f6256a51-47ee-442b-b7dd-9bbae3369622",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": "{{exam_url}}/subjection/663a04b4ef8435a96838e3f9"
+					},
+					"response": []
+				},
+				{
+					"name": "create subjection",
+					"id": "63200fa1-bc28-4567-8159-19d5afe8e0df",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\" : \"IELTS\",\n    \"skill\" : \"reading\",\n    \"code\" : \"MULTIPLE_TYPE_1\",\n    \"subjectionType\" : \"MULTIPLE_TYPE_1\",\n    \"context\" : {\n        \"subtitle\" : \"Questions _ - _\",\n        \"img\" : \"\",\n        \"video\" : \"\",\n        \"audio\" : \"\",\n        \"html\" : \"\",\n        \"quest_html\" : \"\"\n    },\n    \"question\" : {\n        \"note\" : \"\",\n        \"title\" : \"Choose the correct letter A, B or C\",\n        \"items\" : [\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"It has enjoyed global success.\"\n                        },\n                        {\n                            \"name\" : \"It is still in a developmental phrase.\"\n                        },\n                        {\n                            \"name\" : \"It is an example of a foreign company being rebranded for Australia.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"Why has James chosen to do a case study on the company Furniture Rossi?\"\n                },\n                \"correct\" : [\n                    \"B\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"Furniture-making was already a family occupation.\"\n                        },\n                        {\n                            \"name\" : \"Rossi saw a need for hand-crafted furniture.\"\n                        },\n                        {\n                            \"name\" : \"The work Rossi had done previously was unrewarding.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"According to James, why did Luca Rossi start a furniture company?\"\n                },\n                \"correct\" : [\n                    \"A\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"its staff\"\n                        },\n                        {\n                            \"name\" : \"its lower prices\"\n                        },\n                        {\n                            \"name\" : \"it locally sourced products\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What gave Furniture Rossi a competitive advantage over other furniture companies?\"\n                },\n                \"correct\" : [\n                    \"A\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"provide more detailed references\"\n                        },\n                        {\n                            \"name\" : \"check for written accuracy\"\n                        },\n                        {\n                            \"name\" : \"add his own views\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What does the tutor recommend James does when writing the second draft of his case study?\"\n                },\n                \"correct\" : [\n                    \"C\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"It was too short.\"\n                        },\n                        {\n                            \"name\" : \"It focused too much on statistics.\"\n                        },\n                        {\n                            \"name\" : \"There was not enough interaction with the audience.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What do the tutor and James agree was wrong with James’s last presentation?\"\n                },\n                \"correct\" : [\n                    \"B\"\n                ]\n            }\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{exam_url}}/subjection"
+					},
+					"response": []
+				}
+			],
 			"id": "8bea9b79-a52a-41e0-9404-383d3e44fa1b"
 		},
 		{
-			"name": "import listening",
-			"id": "bf8e2ccf-6ac6-4b3a-9133-6fe1713ffcf6",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "",
-							"type": "file",
-							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
-						}
-					]
-				},
-				"url": "{{exam_url}}/import-listening"
-			},
-			"response": []
-		},
-		{
-			"name": "writing submit",
-			"id": "8338bed6-150b-4b53-8759-bc7c086f3c55",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "",
-							"type": "file",
-							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
-						}
-					]
-				},
-				"url": "{{exam_url}}/import-listening"
-			},
-			"response": []
-		},
-		{
-			"name": "import reading",
-			"id": "f61275f8-b30b-4e09-835e-bfa5e898a2ef",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "",
-							"type": "file",
-							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test reading.xlsx"
-						}
-					]
-				},
-				"url": "{{exam_url}}/import-reading"
-			},
-			"response": []
-		},
-		{
-			"name": "import writing",
-			"id": "a7351605-9843-4fa8-9885-3f3b32db13b1",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "",
-							"type": "file",
-							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test writing.xlsx"
-						}
-					]
-				},
-				"url": "{{exam_url}}/import-writing"
-			},
-			"response": []
-		},
-		{
-			"name": "create session",
-			"id": "bb1905e8-0b38-4381-a79a-c71c34ad1baa",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"code\" : \"CODE\",\n    \"passcode\" : \"PASSCODE\",\n    \"type\" : \"IELTS\",\n    \"typeExam\" : \"TEST\",\n    \"dateStart\" : 1715349990,\n    \"dateEnd\" : 1715353590\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{exam_url}}/session"
-			},
-			"response": []
-		},
-		{
-			"name": "create subjection",
-			"id": "63200fa1-bc28-4567-8159-19d5afe8e0df",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"type\" : \"IELTS\",\n    \"skill\" : \"reading\",\n    \"code\" : \"MULTIPLE_TYPE_1\",\n    \"subjectionType\" : \"MULTIPLE_TYPE_1\",\n    \"context\" : {\n        \"subtitle\" : \"Questions _ - _\",\n        \"img\" : \"\",\n        \"video\" : \"\",\n        \"audio\" : \"\",\n        \"html\" : \"\",\n        \"quest_html\" : \"\"\n    },\n    \"question\" : {\n        \"note\" : \"\",\n        \"title\" : \"Choose the correct letter A, B or C\",\n        \"items\" : [\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"It has enjoyed global success.\"\n                        },\n                        {\n                            \"name\" : \"It is still in a developmental phrase.\"\n                        },\n                        {\n                            \"name\" : \"It is an example of a foreign company being rebranded for Australia.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"Why has James chosen to do a case study on the company Furniture Rossi?\"\n                },\n                \"correct\" : [\n                    \"B\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"Furniture-making was already a family occupation.\"\n                        },\n                        {\n                            \"name\" : \"Rossi saw a need for hand-crafted furniture.\"\n                        },\n                        {\n                            \"name\" : \"The work Rossi had done previously was unrewarding.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"According to James, why did Luca Rossi start a furniture company?\"\n                },\n                \"correct\" : [\n                    \"A\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"its staff\"\n                        },\n                        {\n                            \"name\" : \"its lower prices\"\n                        },\n                        {\n                            \"name\" : \"it locally sourced products\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What gave Furniture Rossi a competitive advantage over other furniture companies?\"\n                },\n                \"correct\" : [\n                    \"A\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"provide more detailed references\"\n                        },\n                        {\n                            \"name\" : \"check for written accuracy\"\n                        },\n                        {\n                            \"name\" : \"add his own views\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What does the tutor recommend James does when writing the second draft of his case study?\"\n                },\n                \"correct\" : [\n                    \"C\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"It was too short.\"\n                        },\n                        {\n                            \"name\" : \"It focused too much on statistics.\"\n                        },\n                        {\n                            \"name\" : \"There was not enough interaction with the audience.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What do the tutor and James agree was wrong with James’s last presentation?\"\n                },\n                \"correct\" : [\n                    \"B\"\n                ]\n            }\n        ]\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{exam_url}}/subjection"
-			},
-			"response": []
-		},
-		{
-			"name": "create exam",
-			"id": "1d17802b-c7b2-4301-a128-50a091d89592",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {},
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s1\",\n                        \"subjectionId\": \"667b03d53f86bf1f780b9922\"\n                    }\n                ]\n            }\n          \n        ]\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{exam_url}}/exam"
-			},
-			"response": []
-		},
-		{
-			"name": "Get list session",
-			"id": "e6496d58-7a8b-4e79-a67d-a49555b9933b",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true,
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "file",
-					"file": {}
-				},
-				"url": {
-					"raw": "{{exam_url}}/session?dateFrom=1714640923&dateTo=1714640923",
-					"host": [
-						"{{exam_url}}"
-					],
-					"path": [
-						"session"
-					],
-					"query": [
-						{
-							"key": "dateFrom",
-							"value": "1714640923"
+			"name": "import",
+			"item": [
+				{
+					"name": "import listening",
+					"id": "bf8e2ccf-6ac6-4b3a-9133-6fe1713ffcf6",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
+								}
+							]
 						},
-						{
-							"key": "dateTo",
-							"value": "1714640923"
+						"url": "{{exam_url}}/import-listening"
+					},
+					"response": []
+				},
+				{
+					"name": "writing submit",
+					"id": "8338bed6-150b-4b53-8759-bc7c086f3c55",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
+								}
+							]
 						},
-						{
-							"key": "page",
-							"value": "",
-							"disabled": true
+						"url": "{{exam_url}}/import-listening"
+					},
+					"response": []
+				},
+				{
+					"name": "import reading",
+					"id": "f61275f8-b30b-4e09-835e-bfa5e898a2ef",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test reading.xlsx"
+								}
+							]
 						},
-						{
-							"key": "limit",
-							"value": "",
-							"disabled": true
+						"url": "{{exam_url}}/import-reading"
+					},
+					"response": []
+				},
+				{
+					"name": "import writing",
+					"id": "a7351605-9843-4fa8-9885-3f3b32db13b1",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test writing.xlsx"
+								}
+							]
 						},
-						{
-							"key": "status",
-							"value": "ACTIVE",
-							"disabled": true
-						}
-					]
+						"url": "{{exam_url}}/import-writing"
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get list exam",
-			"id": "0658cfa1-660a-43bf-a0ef-11ca3889ceae",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true,
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "file",
-					"file": {}
-				},
-				"url": {
-					"raw": "{{exam_url}}/exam?sessionId=6633581b7337efcad46fc795&code=TEST22&typeExam=IELTS",
-					"host": [
-						"{{exam_url}}"
-					],
-					"path": [
-						"exam"
-					],
-					"query": [
-						{
-							"key": "sessionId",
-							"value": "6633581b7337efcad46fc795"
-						},
-						{
-							"key": "code",
-							"value": "TEST22"
-						},
-						{
-							"key": "typeExam",
-							"value": "IELTS"
-						},
-						{
-							"key": "page",
-							"value": "",
-							"disabled": true
-						},
-						{
-							"key": "limit",
-							"value": "",
-							"disabled": true
-						},
-						{
-							"key": "status",
-							"value": "ACTIVE",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get subjection by id",
-			"id": "f6256a51-47ee-442b-b7dd-9bbae3369622",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true,
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "file",
-					"file": {}
-				},
-				"url": "{{exam_url}}/subjection/663a04b4ef8435a96838e3f9"
-			},
-			"response": []
+			],
+			"id": "77f5b283-c281-45b0-a9c8-19b40071f111"
 		}
 	]
 }
