@@ -16,12 +16,9 @@
 							"script": {
 								"id": "ebe8fb4c-1043-4410-90cb-a28674f7d90e",
 								"exec": [
-									"var res = JSON.parse(pm.response.text());\r",
-									"if(pm.iterationData.KeyName === 'token')\r",
-									"{\r",
-									"    pm.environment.set(token, res.token);\r",
-									"}\r",
-									"\r",
+									"var responseBody = pm.response.json();",
+									"var responseToken = responseBody.token;",
+									"pm.environment.set('token', responseToken);",
 									""
 								],
 								"type": "text/javascript",
