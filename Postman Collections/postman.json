@@ -296,7 +296,7 @@
 							"file": {}
 						},
 						"url": {
-							"raw": "{{exam_url}}/exam?code=TEST22&typeExam=IELTS",
+							"raw": "{{exam_url}}/exam?page=1&limit=10",
 							"host": [
 								"{{exam_url}}"
 							],
@@ -306,21 +306,21 @@
 							"query": [
 								{
 									"key": "code",
-									"value": "TEST22"
+									"value": "TEST22",
+									"disabled": true
 								},
 								{
 									"key": "typeExam",
-									"value": "IELTS"
+									"value": "IELTS",
+									"disabled": true
 								},
 								{
 									"key": "page",
-									"value": "",
-									"disabled": true
+									"value": "1"
 								},
 								{
 									"key": "limit",
-									"value": "",
-									"disabled": true
+									"value": "10"
 								},
 								{
 									"key": "status",
