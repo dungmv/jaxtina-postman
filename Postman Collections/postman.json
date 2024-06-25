@@ -313,6 +313,33 @@
 						"url": "{{account_url}}/users/update"
 					},
 					"response": []
+				},
+				{
+					"name": "[admin] create",
+					"id": "b35ee8f8-a010-4a73-abc7-1b9aca79eacd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"email\": \"maivandung91@gmail.com\",\n\t\"phone_number\": \"0987127102\",\n\t\"name\": \"mai van dung\",\n\t\"password\": \"123456\"\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/students/create"
+					},
+					"response": []
 				}
 			],
 			"id": "9c02f11b-c189-4972-9676-7015c8accdc9"
