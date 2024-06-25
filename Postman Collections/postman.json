@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "ea9ba622-c9da-4b21-a6d4-2cb11c25dbbe",
+		"name": "JAXTINA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [],
+			"id": "9c02f11b-c189-4972-9676-7015c8accdc9"
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"id": "5156fcfe-8720-4a15-969d-04e01c39ef52",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.2.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone_number\": \"0987127102\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"id": "9927e20a-b5b5-4887-a416-3e72b5f8e159",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"maivandung91@gmail.com\",\n    \"name\": \"Mai Van Dung\",\n    \"password\": \"123456\",\n    \"phone_number\": \"0987127102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "verify",
+					"id": "fbd7589c-ed18-4a6b-991b-c79b8b197d36",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdiNTg1NmYxLWRkNDItNGY2Yi1hOTAwLWQxMzVhODY0YWY2NSIsIm5hbWUiOiJNYWkgVmFuIER1bmciLCJlbWFpbCI6Im1haXZhbmR1bmc5MUBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1bnZlcmlmaWVkIl0sImlhdCI6MTcxODczNTgzMiwiZXhwIjoxNzE4ODIyMjMyfQ.pKs1jE5TZLpO6KoKzJI00IC1ZooL8W89qE9mEQlNp-k"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"otp\": \"753217\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{account_url}}/auth/verify"
+					},
+					"response": []
+				}
+			],
+			"id": "3785031a-fc86-480c-8af1-b048f230cb08"
+		},
+		{
+			"name": "import listening",
+			"id": "bf8e2ccf-6ac6-4b3a-9133-6fe1713ffcf6",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
+						}
+					]
+				},
+				"url": "{{exam_url}}/import-listening"
+			},
+			"response": []
+		},
+		{
+			"name": "writing submit",
+			"id": "8338bed6-150b-4b53-8759-bc7c086f3c55",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test listening.xlsx"
+						}
+					]
+				},
+				"url": "{{exam_url}}/import-listening"
+			},
+			"response": []
+		},
+		{
+			"name": "import reading",
+			"id": "f61275f8-b30b-4e09-835e-bfa5e898a2ef",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test reading.xlsx"
+						}
+					]
+				},
+				"url": "{{exam_url}}/import-reading"
+			},
+			"response": []
+		},
+		{
+			"name": "import writing",
+			"id": "a7351605-9843-4fa8-9885-3f3b32db13b1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/hiepmd/Documents/DEV/JAXTINA/import/Template import test writing.xlsx"
+						}
+					]
+				},
+				"url": "{{exam_url}}/import-writing"
+			},
+			"response": []
+		},
+		{
+			"name": "create sessiion",
+			"id": "bb1905e8-0b38-4381-a79a-c71c34ad1baa",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\" : \"CODE\",\n    \"passcode\" : \"PASSCODE\",\n    \"type\" : \"IELTS\",\n    \"typeExam\" : \"TEST\",\n    \"dateStart\" : 1715349990,\n    \"dateEnd\" : 1715353590\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{exam_url}}/session"
+			},
+			"response": []
+		},
+		{
+			"name": "create subjection",
+			"id": "63200fa1-bc28-4567-8159-19d5afe8e0df",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\" : \"IELTS\",\n    \"skill\" : \"reading\",\n    \"code\" : \"MULTIPLE_TYPE_1\",\n    \"subjectionType\" : \"MULTIPLE_TYPE_1\",\n    \"context\" : {\n        \"subtitle\" : \"Questions _ - _\",\n        \"img\" : \"\",\n        \"video\" : \"\",\n        \"audio\" : \"\",\n        \"html\" : \"\",\n        \"quest_html\" : \"\"\n    },\n    \"question\" : {\n        \"note\" : \"\",\n        \"title\" : \"Choose the correct letter A, B or C\",\n        \"items\" : [\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"It has enjoyed global success.\"\n                        },\n                        {\n                            \"name\" : \"It is still in a developmental phrase.\"\n                        },\n                        {\n                            \"name\" : \"It is an example of a foreign company being rebranded for Australia.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"Why has James chosen to do a case study on the company Furniture Rossi?\"\n                },\n                \"correct\" : [\n                    \"B\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"Furniture-making was already a family occupation.\"\n                        },\n                        {\n                            \"name\" : \"Rossi saw a need for hand-crafted furniture.\"\n                        },\n                        {\n                            \"name\" : \"The work Rossi had done previously was unrewarding.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"According to James, why did Luca Rossi start a furniture company?\"\n                },\n                \"correct\" : [\n                    \"A\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"its staff\"\n                        },\n                        {\n                            \"name\" : \"its lower prices\"\n                        },\n                        {\n                            \"name\" : \"it locally sourced products\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What gave Furniture Rossi a competitive advantage over other furniture companies?\"\n                },\n                \"correct\" : [\n                    \"A\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"provide more detailed references\"\n                        },\n                        {\n                            \"name\" : \"check for written accuracy\"\n                        },\n                        {\n                            \"name\" : \"add his own views\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What does the tutor recommend James does when writing the second draft of his case study?\"\n                },\n                \"correct\" : [\n                    \"C\"\n                ]\n            },\n            {\n                \"quest\" : {\n                    \"options\" : [\n                        {\n                            \"name\" : \"It was too short.\"\n                        },\n                        {\n                            \"name\" : \"It focused too much on statistics.\"\n                        },\n                        {\n                            \"name\" : \"There was not enough interaction with the audience.\"\n                        }\n                    ],\n                    \"quest_number\" : 1,\n                    \"label\" : null,\n                    \"sub_label\" : null,\n                    \"text\" : \"What do the tutor and James agree was wrong with James’s last presentation?\"\n                },\n                \"correct\" : [\n                    \"B\"\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{exam_url}}/subjection"
+			},
+			"response": []
+		},
+		{
+			"name": "create exam",
+			"id": "1d17802b-c7b2-4301-a128-50a091d89592",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sessionId\": \"663de60940d595465414bc73\",\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s4\",\n                        \"subjectionId\": \"663de60b40d595465414bc79\"\n                    },\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s5\",\n                        \"subjectionId\": \"663de60b40d595465414bc7a\"\n                    }\n                ]\n            },\n            {\n                \"partCode\": \"p_2\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_2\",\n                        \"code\": \"s6\",\n                        \"subjectionId\": \"663de60b40d595465414bc7b\"\n                    },\n                    {\n                        \"partCode\": \"p_2\",\n                        \"code\": \"s7\",\n                        \"subjectionId\": \"663de60b40d595465414bc7c\"\n                    }\n                ]\n            },\n            {\n                \"partCode\": \"p_3\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_3\",\n                        \"code\": \"s10\",\n                        \"subjectionId\": \"663de60b40d595465414bc7f\"\n                    },\n                    {\n                        \"partCode\": \"p_3\",\n                        \"code\": \"s11\",\n                        \"subjectionId\": \"663de60b40d595465414bc80\"\n                    },\n                    {\n                        \"partCode\": \"p_3\",\n                        \"code\": \"s12\",\n                        \"subjectionId\": \"663de60b40d595465414bc81\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{exam_url}}/exam"
+			},
+			"response": []
+		},
+		{
+			"name": "Get list session",
+			"id": "e6496d58-7a8b-4e79-a67d-a49555b9933b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "{{exam_url}}/session?dateFrom=1714640923&dateTo=1714640923",
+					"host": [
+						"{{exam_url}}"
+					],
+					"path": [
+						"session"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "1714640923"
+						},
+						{
+							"key": "dateTo",
+							"value": "1714640923"
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "ACTIVE",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list exam",
+			"id": "0658cfa1-660a-43bf-a0ef-11ca3889ceae",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "{{exam_url}}/exam?sessionId=6633581b7337efcad46fc795&code=TEST22&typeExam=IELTS",
+					"host": [
+						"{{exam_url}}"
+					],
+					"path": [
+						"exam"
+					],
+					"query": [
+						{
+							"key": "sessionId",
+							"value": "6633581b7337efcad46fc795"
+						},
+						{
+							"key": "code",
+							"value": "TEST22"
+						},
+						{
+							"key": "typeExam",
+							"value": "IELTS"
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "ACTIVE",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get subjection by id",
+			"id": "f6256a51-47ee-442b-b7dd-9bbae3369622",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": "{{exam_url}}/subjection/663a04b4ef8435a96838e3f9"
+			},
+			"response": []
+		},
+		{
+			"name": "http://202.92.7.92:4004/students/login",
+			"id": "25cf173a-417c-4c8d-9a62-319c6349197c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0-beta.3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"maivandung91@gmail.com\",\n    \"password\": \"123456\"\n}"
+				},
+				"url": "{{account_url}}/students/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://202.92.7.92:4004/teachers/login",
+			"id": "106d021d-502f-414f-bdf5-8d738358afd7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0-beta.3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"maivandung91@gmail.com\",\n    \"password\": \"123456\"\n}"
+				},
+				"url": "http://202.92.7.92:4004/teachers/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://202.92.7.92:4004/students/create",
+			"id": "4d0f84c9-27f6-45fb-8cf3-690d47db8f12",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0-beta.3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"maivandung91@gmail.com\",\n    \"password\": \"123456\"\n}"
+				},
+				"url": "http://202.92.7.92:4004/students/create"
+			},
+			"response": []
+		},
+		{
+			"name": "https://jaxtina.maivandung.name.vn/exam/upload",
+			"id": "dc454c6b-987f-42b5-8d74-bfcfb5d2049d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFkMjM1Njg0LWU0NWQtNGJhYi1iNDIyLTQ5ZmYyZGEyMzNjYyIsIm5hbWUiOiJUZXN0IiwiZW1haWwiOiJtYWl2YW5kdW5nOTFAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIwOTg3MTI3MTAyIiwicm9sZSI6InN0dWRlbnQiLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzE1MTk5MjY3LCJleHAiOjE3MTUyODU2Njd9.WQtG5VaBMn2WkzRoG_rMzWPZV3hcjj2cUojhhH2ErH4"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.1.1"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/dungmv/Downloads/db.zip"
+						}
+					]
+				},
+				"url": "{{exam_url}}/media/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "http://202.92.7.92:4004/students/login",
+			"id": "a9b948b7-7509-4545-bd35-28aceffabc0e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0-beta.3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\": \"0987127102\",\r\n    \"password\": \"123456\"\r\n}"
+				},
+				"url": "http://202.92.7.92:4004/students/login"
+			},
+			"response": []
+		}
+	]
+}
