@@ -587,6 +587,39 @@
 				}
 			],
 			"id": "c49e9a86-234a-49b9-b2a7-0a7de2970051"
+		},
+		{
+			"name": "media",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "f72c7ab3-1d24-40f6-983e-00630d8b0b60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"type": "file",
+									"key": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/C:/Users/maiva/Downloads/Template import bai thi.xlsx"
+									],
+									"src": "/C:/Users/maiva/Downloads/Template import bai thi.xlsx"
+								}
+							]
+						},
+						"url": "{{exam_url}}/media/upload"
+					},
+					"response": []
+				}
+			],
+			"id": "2338ec4e-41d2-4e20-9a6b-2f6d8ccbaa40"
 		}
 	]
 }
