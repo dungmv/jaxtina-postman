@@ -10,6 +10,25 @@
 			"item": [
 				{
 					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ebe8fb4c-1043-4410-90cb-a28674f7d90e",
+								"exec": [
+									"var res = JSON.parse(pm.response.text());\r",
+									"if(pm.iterationData.KeyName === 'token')\r",
+									"{\r",
+									"    pm.environment.set(token, res.token);\r",
+									"}\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "5156fcfe-8720-4a15-969d-04e01c39ef52",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
