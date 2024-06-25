@@ -592,7 +592,7 @@
 			"name": "media",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "upload",
 					"id": "f72c7ab3-1d24-40f6-983e-00630d8b0b60",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -615,6 +615,42 @@
 							]
 						},
 						"url": "{{exam_url}}/media/upload"
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"id": "83e28981-34b0-498d-95c9-391052d3aaaa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.2.0"
+							}
+						],
+						"url": "{{exam_url}}/media"
+					},
+					"response": []
+				},
+				{
+					"name": "download",
+					"id": "f374c976-e0dd-41c3-be59-90965650cb2e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.2.0"
+							}
+						],
+						"url": "{{exam_url}}/media/3ba49c36135cf504c1ef61bf3a613b59.jpg"
 					},
 					"response": []
 				}
