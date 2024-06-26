@@ -502,6 +502,45 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Detail",
+					"id": "3dba6556-790a-4d5c-9362-e53681e60690",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{exam_url}}/session/:id?passcode=PASSCODE",
+							"host": [
+								"{{exam_url}}"
+							],
+							"path": [
+								"session",
+								":id"
+							],
+							"query": [
+								{
+									"key": "passcode",
+									"value": "PASSCODE"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667b04493f86bf1f780b9926"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "706f75a5-18da-409c-afbf-2fa9a8037aca"
