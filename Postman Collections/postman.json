@@ -337,7 +337,7 @@
 								}
 							}
 						},
-						"url": "{{account_url}}/students/create"
+						"url": "{{account_url}}/users/create"
 					},
 					"response": []
 				}
