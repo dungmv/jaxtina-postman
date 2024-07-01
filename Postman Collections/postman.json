@@ -385,7 +385,7 @@
 							"file": {}
 						},
 						"url": {
-							"raw": "{{exam_url}}/exam",
+							"raw": "{{exam_url}}/exam?page=1&limit=20",
 							"host": [
 								"{{exam_url}}"
 							],
@@ -404,11 +404,6 @@
 									"disabled": true
 								},
 								{
-									"key": "page",
-									"value": "1",
-									"disabled": true
-								},
-								{
 									"key": "limit",
 									"value": "10",
 									"disabled": true
@@ -417,6 +412,14 @@
 									"key": "status",
 									"value": "ACTIVE",
 									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
 								}
 							]
 						}
