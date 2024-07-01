@@ -425,6 +425,39 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Detail",
+					"id": "dd7fde00-7f51-44ab-9da8-3297eb1c6bb6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{exam_url}}/exam/:id",
+							"host": [
+								"{{exam_url}}"
+							],
+							"path": [
+								"exam",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "667b03df3f86bf1f780b9924"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "b26a37bc-8595-41dc-87cb-f4a12225e6ae"
