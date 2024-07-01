@@ -747,7 +747,7 @@
 								}
 							]
 						},
-						"url": "{{exam_url}}/media/upload"
+						"url": "{{exam_url}}/storage/upload"
 					},
 					"response": []
 				},
