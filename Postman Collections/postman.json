@@ -765,7 +765,7 @@
 								"value": "insomnia/9.2.0"
 							}
 						],
-						"url": "{{exam_url}}/media"
+						"url": "{{exam_url}}/storage"
 					},
 					"response": []
 				},
