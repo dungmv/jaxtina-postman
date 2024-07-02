@@ -475,6 +475,35 @@
 			"id": "b26a37bc-8595-41dc-87cb-f4a12225e6ae"
 		},
 		{
+			"name": "media",
+			"item": [
+				{
+					"name": "Create",
+					"id": "e1db66c3-bde5-4195-be29-d4f187dd3248",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s1\",\n                        \"totalQuest\": 5,\n                        \"subjectionId\": \"667b03d53f86bf1f780b9922\"\n                    }\n                ],\n                \"mediaId\":\"\"\n            }\n          \n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{exam_url}}/exam"
+					},
+					"response": []
+				}
+			],
+			"id": "12c15b79-114a-4ba7-b164-30971f2565f9"
+		},
+		{
 			"name": "session",
 			"item": [
 				{
