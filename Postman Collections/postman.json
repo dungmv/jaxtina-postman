@@ -489,14 +489,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"code\": \"EXAMCODE\",\n    \"type\": \"IELTS\",\n    \"skill\": \"reading\",\n    \"name\": \"FREE_EXAM\",\n    \"typeExam\": \"EXAM\",\n    \"dateStart\": 1715349990,\n    \"dateEnd\": 1715353590,\n    \"content\": {\n        \"parts\": [\n            {\n                \"partCode\": \"p_1\",\n                \"subjects\": [\n                    {\n                        \"partCode\": \"p_1\",\n                        \"code\": \"s1\",\n                        \"totalQuest\": 5,\n                        \"subjectionId\": \"667b03d53f86bf1f780b9922\"\n                    }\n                ],\n                \"mediaId\":\"\"\n            }\n          \n        ]\n    }\n}",
+							"raw": "{\n    \"type\": \"reading\",\n    \"context\": {\n        \"label\": \"\",\n        \"url\": \"\",//trong trường hợp type = listening thì thêm url bài nghe\n        \"content\": [//Trong trường hợp type = reading thì thêm content\n            {\n                \"label\": \"\",\n                \"content\": \"\"\n            }\n        ]\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{exam_url}}/exam"
+						"url": "{{exam_url}}/media"
 					},
 					"response": []
 				}
