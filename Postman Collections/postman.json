@@ -799,7 +799,21 @@
 								"value": "insomnia/9.2.0"
 							}
 						],
-						"url": "{{exam_url}}/storage"
+						"url": {
+							"raw": "{{exam_url}}/storage?lastItem=2508af0ed324e5e1c0deb179b56ed6d0.png",
+							"host": [
+								"{{exam_url}}"
+							],
+							"path": [
+								"storage"
+							],
+							"query": [
+								{
+									"key": "lastItem",
+									"value": "2508af0ed324e5e1c0deb179b56ed6d0.png"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -817,7 +831,7 @@
 								"value": "insomnia/9.2.0"
 							}
 						],
-						"url": "{{exam_url}}/media/3ba49c36135cf504c1ef61bf3a613b59.jpg"
+						"url": "https://storage-jaxtina.maivandung.name.vn/exam/f9a559da29a09409996c02536caa205b.png"
 					},
 					"response": []
 				}
